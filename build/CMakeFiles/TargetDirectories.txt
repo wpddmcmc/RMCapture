@@ -1,0 +1,3 @@
+/home/mingcongchen/project/inspur/dji_driver/build/CMakeFiles/edit_cache.dir
+/home/mingcongchen/project/inspur/dji_driver/build/CMakeFiles/rebuild_cache.dir
+/home/mingcongchen/project/inspur/dji_driver/build/CMakeFiles/inspur_cam.dir
