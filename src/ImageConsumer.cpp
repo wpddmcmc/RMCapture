@@ -5,7 +5,7 @@
 #define VIDEO_HEIGHT 480
 #define BUFFER_SIZE 1
 
-#define USE_CAMERA
+//#define USE_CAMERA
 
 volatile unsigned int prdIdx = 0;		// index of reading image
 volatile unsigned int csmIdx = 0;		// index of processing image
@@ -49,11 +49,12 @@ void ImageConsumer::ImageReader()
 		cap >> capturedata[prdIdx % BUFFER_SIZE].img;
 		capturedata[prdIdx % BUFFER_SIZE].frame = cap.getFrameCount();
 		#else
-		 while(prdIdx - csmIdx >= BUFFER_SIZE);
+		while(prdIdx - csmIdx >= BUFFER_SIZE);
 		cap >> capturedata[prdIdx % BUFFER_SIZE].img;
 		capturedata[prdIdx % BUFFER_SIZE].frame++;
 		#endif
 		++prdIdx;
+		
 	}
 }
 
